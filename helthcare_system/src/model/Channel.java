@@ -50,13 +50,18 @@ public class Channel {
 			preparedStmt.execute();
 			con.close();
 
+			String newChannels = readChannels(); 
 			output = "\nYou have Inserted successfully";
+			output = "{\"status\":\"success\", \"data\": \"" + newChannels + "\"}"; 
 
 		} catch (Exception e) {
-			output = "\nError while inserting12";
+			/*output = "\nError while inserting12";*/
+			
+			/*output = "{\"status\":\"error\", \"data\": \"Error while inserting the Channeling Details.\"}"; 
 			System.err.println(e.getMessage());
-			System.out.println("not inserted");
-
+			System.out.println("not inserted");*/
+			output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
+			System.err.println(e.getMessage());  
 		}
 
 		return output;
@@ -87,14 +92,19 @@ public class Channel {
 			preparedStmt.execute();
 			con.close();
 
-			output = "\nYou have Updated successfully";
-			System.out.print("Updated");
+			String newChannels = readChannels();
+			 output = "{\"status\":\"success\", \"data\": \"" +	 newChannels + "\"}"; 
+			 
+			/*output = "\nYou have Updated successfully";
+			System.out.print("Updated");*/
 
 		} catch (Exception e) {
-			output = "\nError while updating";
-			System.err.println(e.getMessage());
-			System.out.println("not ups");
+			output = "\nError while updatinf";
+			//System.out.println("not ups");
 
+			output = "{\"status\":\"error\", \"data\":"
+					+ "\"Error while updating the Channel.\"}";
+					 System.err.println(e.getMessage()); 
 		}
 
 		return output;
@@ -127,6 +137,9 @@ public class Channel {
 				String hospital_name = rs.getString("hospital_name");
 				String date = rs.getString("date");
 				String time = rs.getString("time");
+				
+				
+				
 
 				output += "<tr><td><input id=\"hidChannelIDUpdate\" name=\"hidChannelIDUpdate\"     type=\"hidden\" value=\""
 						+ channeling_id + "\">" + patient_name + "</td>";
@@ -176,12 +189,18 @@ public class Channel {
 			preparedStmt.execute();
 			con.close();
 
-			output = "You have Deleted successfully";
+			String newChannels = readChannels();
+			 output = "{\"status\":\"success\", \"data\": \"" + newChannels + "\"}"; 
+
+			/*output = "You have Deleted successfully";*/
 			
 
 		} catch (Exception e) {
-			output = "Error while deleting the item.";
-			System.err.println(e.getMessage());
+			/*output = "Error while deleting the channel.";
+			System.err.println(e.getMessage());*/
+			
+			output = "{\"status\":\"error\", \"data\": \"Error while deleting the channeling details.\"}";
+					 System.err.println(e.getMessage()); 
 		}
 		return output;
 	}
