@@ -2,53 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	
-<%
-		System.out.println("\nTryingto process...");
-
-		if (request.getParameter("patient_name") != null)
-		{ 
-		Channel channelObj = new Channel();  
-		String stsMsg ="";		
-		
-		
-		if (request.getParameter("hidChannelIDSave") == "") {
-			stsMsg =channelObj.insertChannels(request.getParameter("patient_name"), 
-								request.getParameter("patient_age"), 
-								request.getParameter("contact"),
-								request.getParameter("doctor_name"),
-								request.getParameter("hospital_name"),
-								request.getParameter("date"),
-								request.getParameter("time")); 
-		} else
-		{
-			stsMsg = channelObj.updateChannels(request.getParameter("hidChannelIDSave"),
-								request.getParameter("patient_name"),
-								request.getParameter("patient_age"), 
-								request.getParameter("contact"),
-								request.getParameter("doctor_name"),
-								request.getParameter("hospital_name"),
-								request.getParameter("date"),
-								request.getParameter("time")); 
-		}
-		session.setAttribute("statusMsg", stsMsg);
-			
-	} 
-
-		if (request.getParameter("channeling_id") != null)  
-		{ 
-			Channel channelObj = new Channel();  
-			String stsMsg = channelObj.deleteChannels(request.getParameter("channeling_id"));  
-			
-		}
-		if (request.getParameter("hidChannelIDDelete") != null) {
-			Channel channelObj = new Channel();  
-			String stsMsg = channelObj.deleteChannels(request.getParameter("hidChannelIDDelete"));
-			session.setAttribute("statusMsg", stsMsg);
-		}
-	%>	
-	
-	
-	
 	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
