@@ -150,10 +150,9 @@ public class Channel {
 				output += "<td>" + date + "</td>";
 				output += "<td>" + time + "</td>";
 
-				output += "<td><input name=\"btnUpdate\" type=\"button\"    value=\"Update\" class=\"btnUpdate btn btn-secondary\"></td>"
-						+ "<td><form method=\"post\" action=\"channels.jsp\">" + "<input name=\"btnRemove\" "
-						+ " type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"> " 
-				+ "<input name=\"hidChannelIDDelete\" type=\"hidden\" value=\"" + channeling_id + "\">" + "</form></td></tr>"; 
+				output += "<td><input name='btnUpdate' type='button'    value='Update' class='btnUpdate btn btn-secondary'></td>"
+						+ "<td><input name='btnRemove' type='button' 	value='Remove' class='btnRemove btn btn-danger' data-channeling_id='" 
+						+ channeling_id + "'>" + "</td></tr>"; 
 			}
 
 			con.close();

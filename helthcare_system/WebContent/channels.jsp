@@ -9,8 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Doctor Appointments</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
-<script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/main.js"></script> 
 
 
 </head>
@@ -113,18 +111,21 @@
 					<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary" style="width: 140px;">
 					<input type="hidden"id="hidChannelIDSave" name="hidChannelIDSave" value="">
 	</form>
-		<%
-			out.print(session.getAttribute("statusMsg"));
-		%>
-	</div>
 	
-	<div id=alertError" class="alert alert-danger">
+<div id="alertSuccess" class="alert alert-success"></div>
+	<div id="alertError" class="alert alert-danger"></div>
 	
 	<br>
+	
+	<br>
+	<div id="divChannnelsGrid">
 	<%
 		Channel channelObj = new Channel();
-			out.print(channelObj.readChannels());
+		out.print(channelObj.readChannels());
 	%>
+	</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="Components/main.js"></script> 
 	
 </body>
 </html>
