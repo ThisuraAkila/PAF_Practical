@@ -38,7 +38,7 @@ $(document).on("click","#btnSave",function(event)
 					
 					});
 			
-	//		$("#formChannel").submit();
+			$("#formChannel").submit();
 	
 		});
 
