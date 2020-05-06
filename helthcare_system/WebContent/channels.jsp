@@ -22,7 +22,7 @@
 					<!-- PATIENT NAME -->
 					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Patient Name
+							<span class="input-group-text" id="lblName">Patient Name :
 							</span>
 						</div>
 						<input type="text" id="patient_name" name="patient_name">
@@ -44,7 +44,7 @@
 					<!-- CONTACT NUMBER -->
 					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Contact Number
+							<span class="input-group-text" id="lblName">Contact Number :
 							</span>
 						</div>
 						<input type="text" id="contact" name="contact">
@@ -55,7 +55,7 @@
 					<!-- DOCTOR NAME -->
 					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Doctor Name
+							<span class="input-group-text" id="lblName">Doctor Name :
 							</span>
 						</div>
 						<input type="text" id="doctor_name" name="doctor_name">
@@ -66,7 +66,7 @@
 					<!-- HOSPITAL NAME -->
 					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital Name
+							<span class="input-group-text" id="lblName">Hospital Name :
 							</span>
 						</div>
 						<input type="text" id="hospital_name" name="hospital_name">
